@@ -1,97 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejandro Hurtado Fernández</title>
-    <style>
-        /* Estilos CSS */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-image: linear-gradient(to right, #1f2023, #451db7);
-            color: #fff;
-            padding: 40px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav li {
-            margin: 0 10px;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        main {
-            padding: 40px;
-        }
-        section {
-            margin-bottom: 40px;
-        }
-        h2 {
-            color: #1a0083;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        p {
-            line-height: 1.5;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="personal.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to my personal page</h1>
-     </header>
 
-    <main>
-        <section>
-            <h2>About me</h2>
-	    <p>I am a person passionate about design and technology. I like to be constantly learning and exploring new ideas. In my free time, I enjoy design 3D models in Blender, and using and configuring Linux Systems, among others.</p>
-        </section>
 
-        <section>
-            <h2>My projects</h2>
-            <p>Currently, I'm working on some themes and customization for Linux systems</p>
-		<img src="purple-theme.png" alt="hello there" width="300" height="200">
-	    <p>I'm also working on a videogame</p>
-		<img src="FlyingToyota.png" alt="hello there" width="300" height="200">
-	    <p>I always love starting a new projects</p>
-		<img src="thumb-up.jpg" alt="idk what image place here" width="300" height="200">
-        </section>
-	
-	<section>
-            <h2>My studies</h2>
-            <p>For now, I'm studying SMR, Microcomputing Systems and Networking.</p>
-        </section>
+<div class="Div2">
+    <div class="opcion">Home</div>
+    <div class="opcion">idk</div>
+    <div class="opcion">uhm... yes</div>
+    <div class="opcion">I need some text</div>
+    <div class="opcion">:p</div>
+</div>
 
-        <section>
-            <h2>Other</h2>
-            <p>Do you want to stay updated with my projects? Follow me on GitHub!</p>
-            <ul>
-                <li>GitHub: <a href="#">https://github.com/AleX-17r</a></li>
-            </ul>
-	<hr>
-	<a href="https://www.vim.org/download.php"> <img src="vim.gif" alt="Created with Vim" width="80" height="35"> </a>
+<h2 style="text-align:center">Welcome</h2>
+<h4 style="text-align:center">This is my personal page :D</h4>
+<h4 style="text-align:center">(I don't know what more to say... so check out these images :p)</h4>
+<hr>
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 7</div>
+    <img src="imagenesServWeb-borrar/idonunerstan.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 7</div>
+    <img src="imagenesServWeb-borrar/root.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 7</div>
+    <img src="imagenesServWeb-borrar/html.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 7</div>
+    <img src="imagenesServWeb-borrar/works.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 7</div>
+    <img src="imagenesServWeb-borrar/before.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 7</div>
+    <img src="imagenesServWeb-borrar/after.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 7</div>
+    <img src="imagenesServWeb-borrar/question.png" style="height:400px">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+  <hr>
+
+
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+<p>This page feels very empty... so I'm going to fill it with some random things because f*ck you :)
+<br> don't know what to say :P
+<img class="floatleft" src="Pictures/AleX.png" style="height:250px">
+<br>btw, I use arch btw
+<br> <br> Sometimes I'm weird, but other times even more.</p>
+<br> <br> Wait...
+<br> That's true, I'm not a real person, I'm just in ur mind...
+<br> <br> Or are you in <b>my</b> mind???
+<br> If I think about it... I don't know, I wasn't listening to you
+
+<br> Are you really still reading this?
+
+
+<hr>
+
+<div class="Div2">
+	<div class="vim"><a href=""><img src="imagenesServWeb-borrar/vim.gif"></a></div>
+	<div class="vim"><a href="https://github.com/AleX-17r"><img src="imagenesServWeb-borrar/github.png"></a></div>
+	<div class="vim"><a href="https://www.vim.org/"><img src="imagenesServWeb-borrar/vim.gif"></a></div>
+</div>
+
+
+
+</body>
+</html>
 		
