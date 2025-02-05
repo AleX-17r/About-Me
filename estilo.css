@@ -91,6 +91,7 @@ body {
   background-repeat: no-repeat;
   font-family: 'Shadows Into Light', sans-serif;
   color: #ffffff;
+  background-attachment: fixed;
 }
 
 * {
