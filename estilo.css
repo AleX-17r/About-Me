@@ -12,6 +12,7 @@
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 1s ease, color 1s ease, box-shadow 0.5s ease;
+    transition: border-color 1s ease, color 1s ease, box-shadow 0.5s ease;
 
 }
 .opcion:hover {
