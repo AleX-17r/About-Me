@@ -1,5 +1,9 @@
 /* estilo.css */
 
+a {
+    text-decoration: none;
+} /* Links sin subrayar*/
+
 .Div2 {
     display: flex;
     justify-content: space-around;
@@ -11,7 +15,7 @@
     border: 1px solid #aaa;
     border-radius: 12px;
     cursor: pointer;
-    transition: background-color 1s ease, color 1s ease, box-shadow 0.5s ease;
+ transition: background-color 0.7s ease, color 0.7s ease, box-shadow 0.3s ease;
 
 }
 .opcion:hover {
@@ -22,8 +26,7 @@
     background-color: rgb(187, 0, 255); /* fondo */
     color: rgb(0, 0, 0); /* texto */
     padding: 10px 20px;
-    /*border: none;*/
-    border-color: rgb(187, 0, 255);
+    border: none;
     border-radius: 12px;
     cursor: pointer;
 }
@@ -92,7 +95,7 @@ body {
   background-repeat: no-repeat;
   font-family: 'Shadows Into Light', sans-serif;
   color: #ffffff;
-  background-attachment: fixed;
+  background-attachment: fixed
 }
 
 * {
@@ -103,6 +106,16 @@ img {
   vertical-align: middle;
 }
 
+a {
+  font-family: Arial;
+  margin: 0;
+  background-image: url("fondo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Shadows Into Light', sans-serif;
+  color: #ffffff;
+  background-attachment: fixed
+}
 /* Position the image container (needed to position the left and right arrows) */
 
 
@@ -146,4 +159,52 @@ img {
 /* float */
 .floatleft {
   float: left;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.zona-a {
+    background: linear-gradient(to bottom right, rgba(62, 51, 74, 0.966), rgba(106, 106, 106, 0.104));    width: 40%; /* Ancho de Zona A */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: left;
+
+}
+
+.texto {
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 12px;
+
+}
+
+
+.container2 {
+    position: relative; /* Necesario para posicionar los botones */
+    display: flex;
+    justify-content: left; /* Centra el contenido */
+    align-items: flex-start; /* Alinea verticalmente al inicio */
+    flex-direction: row; /* Alinea los elementos en fila */
+    padding: 10px;
+}
+
+.container2 > div {
+    margin-right: 15px; /* Espacio de 15px a la derecha de cada div */
+    transition: transform 0.3s ease; /* Suaviza la transformación */
+}
+
+/* Para evitar margen extra en el último elemento */
+.container2 > div:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+/* Efecto al pasar el ratón */
+.zona-a:hover {
+    transform: scale(1.05) rotate(-1deg); /* Aumenta el tamaño y rota hacia la derecha */
 }
