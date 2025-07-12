@@ -17,85 +17,99 @@
 </div>
 
 <h2 style="text-align:center">Welcome</h2>
-<h4 style="text-align:center">This is my personal page :D</h4>
-<h4 style="text-align:center">(I don't know what more to say... so check out these images :p)</h4>
+
 <hr>
-<div class="container">
-  <div class="mySlides">
-    <div class="numbertext">1 / 7</div>
-    <img src="images/idonunerstan.png" style="height:400px">
-  </div>
 
-  <div class="mySlides">
-    <div class="numbertext">2 / 7</div>
-    <img src="images/root.png" style="height:400px">
-  </div>
+    <div>
 
-  <div class="mySlides">
-    <div class="numbertext">3 / 7</div>
-    <img src="images/html.png" style="height:400px">
-  </div>
+        <div class="container-Slides">
+        	<div class="footer" id="footer">This is my personal webpage.</div>
+	</div>
+        <div class="container-Slides">
+            <div class="zona-a" id="zonaA">
+                <img src="images/gumball.jpg" id="imagenZonaA" class="character">
+            </div>
 
-  <div class="mySlides">
-    <div class="numbertext">4 / 7</div>
-    <img src="images/works.png" style="height:400px">
-  </div>
+            <div class="zona-b" id="zonaB">
+                <div class="preguntas" onclick="cambiarContenido(1)">Who are you?</div>
+                <div class="preguntas" onclick="cambiarContenido(2)">Why you created this?</div>
+                <div class="preguntas" onclick="cambiarContenido(3)">Do you watch anime?</div>
+                <div class="preguntas" onclick="cambiarContenido(4)">fuck-you</div>
+                <div class="preguntas" onclick="cambiarContenido(5)">stranger-things</div>
+                <div class="preguntas" onclick="cambiarContenido(6)">lain</div>
+                <div class="preguntas" onclick="cambiarContenido(7)">*gives their opinion*</div>
+            </div>
+        </div>
+    </div>
 
-  <div class="mySlides">
-    <div class="numbertext">5 / 7</div>
-    <img src="images/before.png" style="height:400px">
-  </div>
+    <script>
+        function cambiarContenido(opcion) {
+            const zonaA = document.getElementById("zonaA");
+            const zonaB = document.getElementById("zonaB");
+            const footer = document.getElementById("footer");
 
-  <div class="mySlides">
-    <div class="numbertext">6 / 7</div>
-    <img src="images/after.png" style="height:400px">
-  </div>
+            // Preguntas disponibles
+            const preguntas = [
+                { id: 0, texto: "What's this?" },
+                { id: 1, texto: "Who are you?" },
+                { id: 2, texto: "Why you created this?" },
+                { id: 3, texto: "Do you watch anime?" },
+                { id: 4, texto: "fuck-you" },
+                { id: 5, texto: "stranger-things" },
+                { id: 6, texto: "lain" },
+                { id: 7, texto: "*gives their opinion*" }
+            ];
 
-  <div class="mySlides">
-    <div class="numbertext">7 / 7</div>
-    <img src="images/question.png" style="height:400px">
-  </div>
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-</div>
-<br>
-  <hr>
-
-
-
-
-<script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+            // Cambiar contenido de zona-a y Respuesta
+switch (opcion) {
+    case 0:
+        zonaA.innerHTML = "<img src='images/gumball.jpg' class='character'>";
+        footer.innerHTML = "This is my personal webpage.";
+        break;
+    case 1:
+        zonaA.innerHTML = "<img src='images/skate.jpg' class='character'>";
+        footer.innerHTML = "My name is AleX... and I'm a weird person.";
+        break;
+    case 2:
+        zonaA.innerHTML = "<img src='images/flying.jpg' class='character'>";
+        footer.innerHTML = "Because is really cool.";
+        break;
+    case 3:
+        zonaA.innerHTML = "<img src='images/anime.jpg' class='character'>";
+        footer.innerHTML = "Yes I watch anime But not in a weird sussy baka uwu senpai chan way but more like a 90s psychological-horror way";
+        break;
+    case 4:
+        zonaA.innerHTML = "<img src='images/fuck-you.jpg' class='character'>";
+        footer.innerHTML = "No, fuck you";
+        break;
+    case 5:
+        zonaA.innerHTML = "<img src='images/stranger-things.jpg' class='character'>";
+        footer.innerHTML = "or whatever";
+        break;
+    case 6:
+        zonaA.innerHTML = "<img src='images/lain.jpg' class='character'>";
+        footer.innerHTML = "Fuck your shit, I'm in a bear suit.";
+        break;
+    case 7:
+        zonaA.innerHTML = "<img src='images/opinion.jpg' class='character'>";
+        footer.innerHTML = "Your opinion is inaccurate and unwanted.";
+        break;
 }
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
+            // Actualizar preguntas en zona-b
+            let preguntasHTML = "";
+            preguntas.forEach(pregunta => {
+                if (pregunta.id !== opcion) {
+                    preguntasHTML += `<div class="preguntas" onclick="cambiarContenido(${pregunta.id})">${pregunta.texto}</div>`;
+                }
+            });
+            zonaB.innerHTML = preguntasHTML;
+        }
+    </script>
 
 
+
+    <hr>
 
 <p>This page feels very empty... so I'm going to fill it with some random things because f*ck you :)
 <br> don't know what to say :P
@@ -116,7 +130,7 @@ function showSlides(n) {
 <hr>
 
 <div class="container2">
-    <div class="zona-a">
+    <div class="etiqueta">
 	<div class="container2">
 		<img src="images/gumball.jpg" style="height:250px">
 
@@ -129,7 +143,7 @@ function showSlides(n) {
 		</div>
 	</div>
     </div>
-<div class="zona-a">
+<div class="etiqueta">
 	<div class="container2">
 		<img src="images/skate-night.jpg" style="height:250px">
 
