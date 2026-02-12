@@ -1,0 +1,50 @@
+body{
+    padding-left: 3%;
+    padding-right: 3%;
+    background: #ffffff;
+    background: linear-gradient(0deg,rgba(201, 26, 26, 0.51) 0%, rgba(255, 0, 0, 0) 20%, rgba(255, 255, 255, 0) 80%, rgba(201, 26, 26, 0.51) 100%);    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@font-face {
+  font-family: letter; /* set name */
+  src: url(Lovelt__.ttf); /* url of the font */
+}
+
+eslogan {
+    font-size: 20px;
+    font-style: italic;
+    font-family: letter;
+    padding-left: 80px;
+}
+
+h1 {
+    font-family: letter;
+}
+
+.titulo {
+  font-family: letter;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.titulo1 {
+  display: flex;
+  flex-direction: row;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.container div {
+  width: 100px;
+  align-items: center;
+}
+
+.container-links div {
+  width: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;  
+}
